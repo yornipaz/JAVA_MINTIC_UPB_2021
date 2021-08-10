@@ -14,5 +14,6 @@ public class Doctor extends Empleado {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+    
 
 }

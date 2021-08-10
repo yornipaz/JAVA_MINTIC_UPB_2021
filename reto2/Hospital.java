@@ -13,19 +13,44 @@ public class Hospital {
     }
 
     public static double liquidarNominaEmpleado(Empleado empleado) {
-        double aporte = empleado.getSalario() * .08;
+        int salario = empleado.getSalario();
+        double aporte = salario * .08;
 
-        double nomina = empleado.getSalario() - aporte;
+        double nomina = salario - aporte;
 
         return nomina;
     }
 
     public static double liquidarSaludEmpleado(Empleado empleado) {
-        double salud = empleado.getSalario() * 0.085;
-        double pension = empleado.getSalario() * 0.12;
-        double riesgosLaborales = empleado.getSalario() * 0.00522;
+        int salario = empleado.getSalario();
+        double salud = salario * 0.085;
+        double pension = salario * 0.12;
+        double riesgosLaborales = salario * 0.00522;
         double liquidacion = salud + pension + riesgosLaborales;
         return liquidacion;
+    }
+
+    public static double liquidarPrestacionesEmpleado(Empleado empleado) {
+        int salario = empleado.getSalario();
+        double primas = salario * 0.0833;
+        double cesantias = salario * 0.0833;
+        double interesesCesantias = cesantias * .12;
+        double vacaciones = salario * 0.0416;
+        double liquidar = primas + cesantias + interesesCesantias + vacaciones;
+        return liquidar;
+
+    }
+
+    public static double liquidarParafiscalesEmpleado(Empleado empleado) {
+        int salario = empleado.getSalario();
+        double cajaCompensacion = salario * 0.04;
+        double ICBF = salario * 0.03;
+        double SENA = salario * 0.02;
+
+        double liquidar = cajaCompensacion + ICBF + SENA;
+
+        return liquidar;
+
     }
 
 }
