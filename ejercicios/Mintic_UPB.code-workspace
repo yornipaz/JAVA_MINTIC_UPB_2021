@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"reto2",
+			"ejercicios",
+			"reto1"
+		]
+	}
+}
